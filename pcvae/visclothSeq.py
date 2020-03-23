@@ -5,13 +5,14 @@ import h5py
 import time
 
 # load the bagdata.h5
-full_data = h5py.File('../data/bagdata_dense.h5', "r")
-numVideo = full_data['posSeqDense_5'].shape[0]
-numFrame = full_data['posSeqDense_5'].shape[1]
-numPoint = full_data['posSeqDense_5'].shape[2]
+full_data = h5py.File('/home/zehang/Downloads/dataset/bagdata_dense_3435_bag72_a0_speed1_20200225.h5', "r")
+
+numVideo = full_data['posSeqDense_3435'].shape[0]
+numFrame = full_data['posSeqDense_3435'].shape[1]
+numPoint = full_data['posSeqDense_3435'].shape[2]
 numTotalFrame = numVideo*numFrame
 # convert to ndarray
-h5data_seqpos = full_data['posSeqDense_5'][0:10].astype(np.float)
+h5data_seqpos = full_data['posSeqDense_3435'][0:10].astype(np.float)
 print(h5data_seqpos.shape)
 
 
