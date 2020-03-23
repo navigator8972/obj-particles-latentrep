@@ -11,6 +11,7 @@ The bag is simulated with 1145 particles for original version, and the dense ver
 > In the h5 dataset file, the 2nd dim corresponds to z axis and the 3rd dim corresponds to the y axis. The "pcvae/viscloth.ipynb" shows some examples in the dataset. The "pcvae/loadH5Data.py" file includes a simple example of training pcvae with the cloth data (without temporal information). At this stage, we only consider the "0" movement during the trajectory.
 
 action id list:
+
 0. move left with random speed.
 1. move right with random speed.
 2. left then right
