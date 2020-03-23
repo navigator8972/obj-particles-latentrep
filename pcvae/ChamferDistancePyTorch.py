@@ -49,6 +49,12 @@ def chamfer_distance_with_batch(p1, p2, verbose=False):
     
     return dist_p1_p2, dist_p2_p1
 
+def centroidPointCloud(p):
+    # p:
+    centroid = torch.mean(p, axis = 2).reshape(p.shape[0], p.shape[1], 1)
+    # print(centroid.shape)
+    return centroid
+
 if __name__ == '__main__':
     import numpy as np
     # from sklearn.neighbors import KDTree
